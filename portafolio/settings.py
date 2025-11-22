@@ -27,7 +27,7 @@ import os
 
 DEBUG = os.getenv("DEBUG", "False") == "True"
 
-ALLOWED_HOSTS = ["mi-proyecto-django.onrender.com", "localhost"]
+ALLOWED_HOSTS = ["portafolio-web-ab5z.onrender.com/", "localhost"]
 
 
 # Application definition
