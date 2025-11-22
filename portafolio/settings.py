@@ -25,9 +25,9 @@ SECRET_KEY = 'django-insecure-=gwdr_a2(v3y@q((@ryreq_yt+=0y4%5hsvmu_t-p_&ngyrvb5
 # SECURITY WARNING: don't run with debug turned on in production!
 import os
 
-DEBUG = os.getenv("DEBUG", "False") == "True"
+DEBUG = False
 
-ALLOWED_HOSTS = ["portafolio-web-ab5z.onrender.com/", "localhost"]
+ALLOWED_HOSTS = ["portafolio-web-ab5z.onrender.com", "localhost"]
 
 
 # Application definition
