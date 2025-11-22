@@ -2,9 +2,11 @@ from django.shortcuts import render, redirect
 from django.core.mail import send_mail
 from django.conf import settings
 from django.contrib import messages
+import logging
+
+logger = logging.getLogger(__name__)
 
 # Create your views here.
-
 def inicio(request):
     return render(request, 'menu/inicio.html')
 
@@ -25,8 +27,8 @@ def enviar_correo(request):
             )
             messages.success(request, "¡Tu mensaje se envió correctamente! 😊")
         except Exception as e:
+            logger.error("Error al enviar correo: %s", e, exc_info=True)
             messages.error(request, "Ocurrió un error al enviar tu mensaje. Inténtalo más tarde 😔")
-        
 
         return redirect("inicio")
 
