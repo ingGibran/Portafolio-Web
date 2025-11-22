@@ -1,0 +1,195 @@
+@font-face {
+    font-family: "MinecraftFont";
+    src: url("fonts/Mojang-Regular.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "MinecraftFont";
+    src: url("fonts/Mojang-Bold.ttf") format("truetype");
+    font-weight: bold;
+    font-style: normal;
+}
+
+.titulo {
+    grid-auto-columns: auto;
+    margin-top: 10%;
+    margin-bottom: 5%;
+}
+
+.texto-botones {
+    font-family: "MinecraftFont", system-ui, sans-serif;
+}
+
+body {
+    background-image: url("img/fondo-mc.jpg");
+    background-size:cover;
+    background-repeat: no-repeat;
+}
+
+.btn-minecraft {
+    display: inline-block;
+    padding: 10px 28px;
+    font-family: "MinecraftFont", "Press Start 2P", system-ui, sans-serif;
+    font-size: 14px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+
+    color: #ffffff;
+    background: linear-gradient(gray, gray);
+    border: 3px solid #0f2612;                     
+    box-shadow:
+        0 4px 0 #0f2612, 
+        0 4px 10px rgba(0,0,0,0.6);
+
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+
+    transition:
+        transform 0.05s ease,
+        box-shadow 0.05s ease,
+        filter 0.1s ease;
+}
+
+.btns-grandes {
+    margin-top: 1%;
+    padding: 15px 50px 15px 50px;
+}
+
+.btns-medianos {
+    margin-top: 1%;
+    padding: 15px 50px 15px 50px;
+}
+
+.btns-chicos {
+    margin-top: 1%;
+    
+}
+
+/* Estado hover: un poco más brilloso */
+.btn-minecraft:hover {
+    filter: brightness(1.1);
+}
+
+/* Estado active: parece que se hunde */
+.btn-minecraft:active {
+    transform: translateY(3px);
+    box-shadow:
+    0 1px 0 #0f2612,
+    0 2px 5px rgba(0,0,0,0.6);
+}
+
+.btn-icon { 
+    width: 30px; 
+    height: 30px; 
+}
+
+.minecraft-modal {
+    background-color: rgba(0, 0, 0, 0.85);
+    color: #fff;
+    border: 3px solid #0f2612;
+    box-shadow:
+        0 4px 0 #0f2612,
+        0 8px 16px rgba(0,0,0,0.8);
+    font-family: "MinecraftFont", system-ui, sans-serif;
+}
+
+.minecraft-modal .modal-header,
+.minecraft-modal .modal-body {
+    border-color: #0f2612;
+}
+
+.minecraft-modal .form-control {
+    background-color: #1f1f1f;
+    color: #fff;
+    border: 2px solid #555;
+}
+
+.minecraft-modal .form-control:focus {
+    border-color: #3ab34a;
+    box-shadow: none;
+}
+
+.card-habilidades {
+    margin-bottom: 20px;
+    background-color: gray;
+    color: #ffffff;
+    font-family: "MinecraftFont", "Press Start 2P", system-ui, sans-serif;
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+.minecraft-card {
+    background-color: rgba(0, 0, 0, 0.85);
+    color: #ffffff;
+    border: 3px solid #0f2612;
+    box-shadow:
+        0 4px 0 #0f2612,
+        0 8px 16px rgba(0,0,0,0.8);
+    border-radius: 0;
+    font-family: "MinecraftFont", system-ui, sans-serif;
+}
+
+.minecraft-card .card-header {
+    background: linear-gradient(#606060, #3b3b3b);
+    border-bottom: 3px solid #0f2612;
+}
+
+.minecraft-card .card-header h2 {
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.minecraft-skill-group {
+    padding: 8px 12px;
+    background-color: rgba(30, 30, 30, 0.9);
+    border: 2px solid #2b2b2b;
+}
+
+.minecraft-skill-title {
+    font-size: 16px;
+    margin-bottom: 4px;
+    text-transform: uppercase;
+    color: gray;
+}
+
+.minecraft-skill-list {
+    list-style: none;
+    padding-left: 16px;
+    margin-bottom: 0;
+}
+
+.minecraft-skill-list li::before {
+    content: "◆ ";
+    color: yellow;
+    font-size: 12px;
+}
+
+.minecraft-alert {
+    padding: 10px 16px;
+    margin-bottom: 12px;
+    border: 3px solid #0f2612;
+    box-shadow:
+        0 4px 0 #0f2612,
+        0 4px 10px rgba(0,0,0,0.6);
+    background-color: rgba(0, 0, 0, 0.85);
+    color: #fff;
+    font-family: "MinecraftFont", system-ui, sans-serif;
+}
+
+/* Para mensajes de éxito */
+.minecraft-alert.success {
+    border-color: #2e7d32;
+}
+
+/* Para mensajes de error */
+.minecraft-alert.error {
+    border-color: #c62828;
+}
+
+.img-proyecto {
+    width: 70%;
+}
