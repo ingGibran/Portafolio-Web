@@ -189,3 +189,7 @@ body {
 .minecraft-alert.error {
     border-color: #c62828;
 }
+
+.img-proyecto {
+    width: 70%;
+}
