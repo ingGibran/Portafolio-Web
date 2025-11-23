@@ -2,7 +2,9 @@ from django.shortcuts import render, redirect
 from django.core.mail import send_mail
 from django.conf import settings
 from django.contrib import messages
+
 import logging
+import resend
 
 logger = logging.getLogger(__name__)
 
@@ -19,15 +21,17 @@ def enviar_correo(request):
         full_message = f"De: {email}\n\n{message}"
 
         try:
-            send_mail(
-                subject,
-                full_message,
-                settings.DEFAULT_FROM_EMAIL,
-                ["zaga1709@hotmail.com"],
-            )
+            resend.Emails.send({
+                "from": settings.CONTACT_EMAIL_FROM,
+                "to": [settings.CONTACT_EMAIL_TO],
+                "subject": subject,
+                "text": full_message,
+            })
+
+
             messages.success(request, "¡Tu mensaje se envió correctamente! 😊")
         except Exception as e:
-            logger.error("Error al enviar correo: %s", e, exc_info=True)
+            print("Error al enviar correo con Resend:", e)
             messages.error(request, "Ocurrió un error al enviar tu mensaje. Inténtalo más tarde 😔")
 
         return redirect("inicio")

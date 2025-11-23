@@ -27,7 +27,7 @@ import os
 
 DEBUG = False
 
-ALLOWED_HOSTS = ["portafolio-web-ab5z.onrender.com", "localhost"]
+ALLOWED_HOSTS = ["portafolio-web-ab5z.onrender.com", "127.0.0.1"]
 
 
 # Application definition
@@ -134,17 +134,13 @@ STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
-DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+import resend
+RESEND_API_KEY = os.getenv("RESEND_API_KEY", "")
 
-# EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
-EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
 
-EMAIL_HOST = "smtp.gmail.com"
-EMAIL_PORT = 587
-EMAIL_USE_TLS = True
-
-EMAIL_HOST_USER = "alegizago@gmail.com"
-EMAIL_HOST_PASSWORD = "rdut lfet dvdc iena"
-
-DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
+if RESEND_API_KEY:
+    resend.api_key = RESEND_API_KEY
+    
+CONTACT_EMAIL_TO = "zaga1709@hotmail.com"
+CONTACT_EMAIL_FROM = "Portafolio <onboarding@resend.dev>"
 
