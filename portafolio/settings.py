@@ -27,7 +27,7 @@ import os
 
 DEBUG = False
 
-ALLOWED_HOSTS = ["portafolio-web-ab5z.onrender.com", "127.0.0.1"]
+ALLOWED_HOSTS = ["portafolio-web-ab5z.onrender.com", "127.0.0.1", ".vercel.app"]
 
 
 # Application definition

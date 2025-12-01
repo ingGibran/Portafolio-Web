@@ -55,17 +55,18 @@ body {
 
 .btns-grandes {
     margin-top: 1%;
-    padding: 15px 50px 15px 50px;
+    padding: 6% 1% 6% 1%;
+    font-size: 100%;
 }
 
 .btns-medianos {
-    margin-top: 1%;
-    padding: 15px 50px 15px 50px;
+    width: 100%;
+    padding: 6% 1% 6% 1%;
+    font-size: 100%;
 }
 
 .btns-chicos {
-    margin-top: 1%;
-    
+    width: 100%;
 }
 
 /* Estado hover: un poco más brilloso */
@@ -82,8 +83,8 @@ body {
 }
 
 .btn-icon { 
-    width: 30px; 
-    height: 30px; 
+    width: 3em;
+    padding: 5%;
 }
 
 .minecraft-modal {
